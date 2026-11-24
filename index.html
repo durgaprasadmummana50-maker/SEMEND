@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>College MS</h2>
+
+        <ul>
+            <li onclick="showPage('dashboard')">Dashboard</li>
+            <li onclick="showPage('students')">Students</li>
+            <li onclick="showPage('faculty')">Faculty</li>
+            <li onclick="showPage('courses')">Courses</li>
+            <li onclick="showPage('attendance')">Attendance</li>
+            <li onclick="showPage('fees')">Fees</li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <header>
+            <h1>College Management System</h1>
+            <p>Welcome, Admin!</p>
+        </header>
+
+        <!-- Dashboard -->
+        <section id="dashboard" class="page active">
+            <h2>Dashboard</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Students</h3>
+                    <p id="studentCount">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Faculty</h3>
+                    <p>25</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Courses</h3>
+                    <p>10</p>
+                </div>
+
+                <div class="card">
+                    <h3>Departments</h3>
+                    <p>5</p>
+                </div>
+            </div>
+
+            <h2>College Information</h2>
+            <p>Welcome to the College Management System.
+            Manage students, faculty, courses, attendance and fees
+            from one place.</p>
+        </section>
+
+        <!-- Students -->
+        <section id="students" class="page">
+            <h2>Student Management</h2>
+
+            <form id="studentForm">
+                <input type="text" id="studentName"
+                    placeholder="Student Name" required>
+
+                <input type="text" id="rollNumber"
+                    placeholder="Roll Number" required>
+
+                <input type="text" id="department"
+                    placeholder="Department" required>
+
+                <input type="email" id="email"
+                    placeholder="Email" required>
+
+                <button type="submit">Add Student</button>
+            </form>
+
+            <h3>Student Details</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Roll Number</th>
+                        <th>Department</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTable"></tbody>
+            </table>
+        </section>
+
+        <!-- Faculty -->
+        <section id="faculty" class="page">
+            <h2>Faculty Management</h2>
+            <p>Faculty management module.</p>
+
+            <div class="info-box">
+                Manage faculty members, their departments
+                and contact details.
+            </div>
+        </section>
+
+        <!-- Courses -->
+        <section id="courses" class="page">
+            <h2>Course Management</h2>
+
+            <table>
+                <tr>
+                    <th>Course ID</th>
+                    <th>Course Name</th>
+                    <th>Duration</th>
+                </tr>
+                <tr>
+                    <td>C101</td>
+                    <td>Computer Science</td>
+                    <td>4 Years</td>
+                </tr>
+                <tr>
+                    <td>C102</td>
+                    <td>Information Technology</td>
+                    <td>4 Years</td>
+                </tr>
+                <tr>
+                    <td>C103</td>
+                    <td>Electronics</td>
+                    <td>4 Years</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Attendance -->
+        <section id="attendance" class="page">
+            <h2>Attendance Management</h2>
+            <div class="info-box">
+                Attendance management module.
+                Attendance records can be added in a future version.
+            </div>
+        </section>
+
+        <!-- Fees -->
+        <section id="fees" class="page">
+            <h2>Fee Management</h2>
+
+            <table>
+                <tr>
+                    <th>Fee Type</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>Tuition Fee</td>
+                    <td>₹50,000</td>
+                </tr>
+                <tr>
+                    <td>Library Fee</td>
+                    <td>₹2,000</td>
+                </tr>
+                <tr>
+                    <td>Examination Fee</td>
+                    <td>₹1,500</td>
+                </tr>
+            </table>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
